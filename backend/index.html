@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>DealDhamaka Admin Panel</title>
+<style>
+body{font-family:Arial;background:#2f3542;color:white;padding:20px}
+input,button{padding:10px;margin:5px;border-radius:5px;border:none}
+button{background:#ff4757;color:white;cursor:pointer}
+h1{color:#ff4757}
+</style>
+</head>
+<body>
+<h1>⚡ DealDhamaka Admin Panel ⚡</h1>
+<h3>Product Add Karo</h3>
+<input id="name" placeholder="Product Name"><br>
+<input id="price" placeholder="Price" type="number"><br>
+<input id="image" placeholder="Image URL"><br>
+<button onclick="addProduct()">Add Product</button>
+
+<script>
+function addProduct(){
+  alert('Product Added! Backend mein DB connect karke yahan API lagayenge');
+}
+</script>
+</body>
+</html>
