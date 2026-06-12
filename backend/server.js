@@ -6,7 +6,7 @@ const jwt = require('jsonwebtoken');
 require('dotenv').config();
 
 const User = require('./models/User');
-
+const authRoutes = require('./routes/auth');
 const app = express();
 app.use(cors());
 app.use(express.json());
@@ -14,6 +14,7 @@ app.use(express.json());
 mongoose.connect(process.env.MONGO_URL)
 .then(() => console.log('DealDhamaka DB Connected 🔥'))
 .catch(err => console.log(err));
+app.use('/api/auth', authRoutes);
 
 // Register
 app.post('/api/register', async (req, res) => {
